@@ -26,6 +26,11 @@ HRESULT CLevel::Clear_Resources()
 	return m_pGameInstance->Clear_LevelResources(m_iLevelIndex);
 }
 
+HRESULT CLevel::Ready_Texts()
+{
+	return S_OK;
+}
+
 void CLevel::Free()
 {
 	__super::Free();

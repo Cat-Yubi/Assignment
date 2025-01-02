@@ -14,7 +14,7 @@ public:
 	virtual HRESULT Initialize();
 	virtual void Update(_float fTimeDelta);
 	virtual HRESULT Render(_float fTimeDelta);
-
+	virtual HRESULT Ready_Texts();
 public:
 	HRESULT Clear_Resources();
 	_uint GetLevelIndex() const { return m_iLevelIndex; };

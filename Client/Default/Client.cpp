@@ -35,7 +35,6 @@ int main()
 			pMainApp->Render(pGameInstance->Compute_TimeDelta(TEXT("Timer_60")));
 
 			fTimeAcc = 0.f;
-
 			
 		}
 	}

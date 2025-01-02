@@ -11,6 +11,9 @@ HRESULT CLevel_Array::Initialize()
 {
 	m_iLevelIndex = LEVEL_ARRAY;
 
+	if (FAILED(Ready_Texts()))
+		return E_FAIL;
+
 	return S_OK;
 }
 
@@ -25,6 +28,15 @@ void CLevel_Array::Update(_float fTimeDelta)
 
 HRESULT CLevel_Array::Render(_float fTimeDelta)
 {
+	m_pGameInstance->Render_Text(m_iLevelIndex, 0);
+
+	return S_OK;
+}
+
+HRESULT CLevel_Array::Ready_Texts()
+{
+	if (FAILED(m_pGameInstance->Add_Text(m_iLevelIndex, 0, R"(¤±¤±¤±)")))
+		return E_FAIL;
 
 	return S_OK;
 }

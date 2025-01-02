@@ -15,6 +15,7 @@ public:
 	virtual HRESULT Initialize() override;
 	virtual void Update(_float fTimeDelta) override;
 	virtual HRESULT Render(_float fTimeDelta) override;
+	virtual HRESULT Ready_Texts() override;
 
 public:
 	static CLevel_Array* Create();

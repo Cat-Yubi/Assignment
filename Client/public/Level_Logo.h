@@ -15,9 +15,8 @@ public:
 	virtual HRESULT Initialize() override;
 	virtual void Update(_float fTimeDelta) override;
 	virtual HRESULT Render(_float fTimeDelta) override;
+	virtual HRESULT Ready_Texts() override;
 
-private:
-	HRESULT Ready_Texts();
 private:
 	_bool m_bisStart = { false };
 	const _char* m_tLogo;
