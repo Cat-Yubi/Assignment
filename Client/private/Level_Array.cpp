@@ -14,9 +14,10 @@ HRESULT CLevel_Array::Initialize()
 	if (FAILED(Ready_Texts()))
 		return E_FAIL; 
 
-	CSimpleVector<int>* vec = CSimpleVector<int>::Create(5);
-	vec->Push_Back(100);
-	vec->At(10) = 10;
+	CSimpleVector<int> vec(3);
+	vec[1] = 1;
+	
+	
 	return S_OK;
 }
 
