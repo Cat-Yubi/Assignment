@@ -20,7 +20,7 @@ public:
 public:
 	_bool Check_QuitGame() const { return m_bCheckQuit; }
 private:
-	HRESULT Open_Level(LEVELID eStartLevelID);
+	HRESULT Open_Level();
 
 	CGameInstance* m_pGameInstance = { nullptr };
 

@@ -17,9 +17,6 @@ public:
 	virtual HRESULT Render(_float fTimeDelta) override;
 	virtual HRESULT Ready_Texts() override;
 
-private:
-	_bool m_bisStart = { false };
-	const _char* m_tLogo;
 public:
 	static CLevel_Logo* Create();
 	virtual void Free() override;

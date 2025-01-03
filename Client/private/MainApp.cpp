@@ -15,10 +15,9 @@ HRESULT CMainApp::Initialize()
     if (FAILED(m_pGameInstance->Initialize_Engine(LEVEL_END)))
         return E_FAIL;
 
-	if (FAILED(Open_Level(LEVEL_LOGO)))
+	if (FAILED(Open_Level()))
 		return E_FAIL;
 
-	int a = 10;
     return S_OK;
 }
 
@@ -36,10 +35,8 @@ HRESULT CMainApp::Render(_float fTimeDelta)
     return S_OK;
 }
 
-HRESULT CMainApp::Open_Level(LEVELID eStartLevelID)
+HRESULT CMainApp::Open_Level()
 {
-	/*if (FAILED(m_pGameInstance->Change_Level(CLevel_Loading::Create(eStartLevelID))))
-		return E_FAIL;*/
 	if (FAILED(m_pGameInstance->Change_Level(CLevel_Logo::Create())))
 		return E_FAIL;
 

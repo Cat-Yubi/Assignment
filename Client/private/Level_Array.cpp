@@ -1,7 +1,7 @@
 #include "Level_Array.h"
 
 #include "GameInstance.h"
-
+#include "SimpleVector.h"
 CLevel_Array::CLevel_Array()
 	: CLevel{}
 {
@@ -12,8 +12,11 @@ HRESULT CLevel_Array::Initialize()
 	m_iLevelIndex = LEVEL_ARRAY;
 
 	if (FAILED(Ready_Texts()))
-		return E_FAIL;
+		return E_FAIL; 
 
+	CSimpleVector<int>* vec = CSimpleVector<int>::Create(5);
+	vec->Push_Back(100);
+	vec->At(10) = 10;
 	return S_OK;
 }
 

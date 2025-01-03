@@ -22,6 +22,7 @@
     <ClCompile Include="..\private\Level_Array.cpp" />
     <ClCompile Include="..\private\Level_Logo.cpp" />
     <ClCompile Include="..\private\MainApp.cpp" />
+    <ClCompile Include="..\private\SimpleVector.cpp" />
     <ClCompile Include="..\private\Test.cpp" />
     <ClCompile Include="Client.cpp" />
   </ItemGroup>
@@ -30,6 +31,7 @@
     <ClInclude Include="..\public\Level_Array.h" />
     <ClInclude Include="..\public\Level_Logo.h" />
     <ClInclude Include="..\public\MainApp.h" />
+    <ClInclude Include="..\public\SimpleVector.h" />
     <ClInclude Include="..\public\Test.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
