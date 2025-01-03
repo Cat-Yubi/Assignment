@@ -16,25 +16,16 @@
     <Filter Include="02.GameObjects">
       <UniqueIdentifier>{68cd4fc4-da76-4965-a291-388d091afc08}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02.GameObjects\Test">
-      <UniqueIdentifier>{1fc8b5c5-74e5-42be-abf1-d9e369c0fcee}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.Level\Level_Logo">
       <UniqueIdentifier>{c0768b47-d986-4367-af04-db20c06c48bd}</UniqueIdentifier>
     </Filter>
     <Filter Include="01.Level\Level_Array">
       <UniqueIdentifier>{bd349a96-d211-4642-b648-e3398386a9e4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.Level\Level_">
-      <UniqueIdentifier>{e512f637-7141-42fc-9ef9-ac2c9ae69643}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
       <Filter>98.Default</Filter>
-    </ClCompile>
-    <ClCompile Include="..\private\Test.cpp">
-      <Filter>02.GameObjects\Test</Filter>
     </ClCompile>
     <ClCompile Include="..\private\MainApp.cpp">
       <Filter>00.MainApp</Filter>
@@ -47,9 +38,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\public\Test.h">
-      <Filter>02.GameObjects\Test</Filter>
-    </ClInclude>
     <ClInclude Include="..\public\Client_Defines.h">
       <Filter>99.Defines</Filter>
     </ClInclude>

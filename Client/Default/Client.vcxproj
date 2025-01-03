@@ -22,7 +22,6 @@
     <ClCompile Include="..\private\Level_Library.cpp" />
     <ClCompile Include="..\private\Level_Logo.cpp" />
     <ClCompile Include="..\private\MainApp.cpp" />
-    <ClCompile Include="..\private\Test.cpp" />
     <ClCompile Include="Client.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -30,7 +29,6 @@
     <ClInclude Include="..\public\Level_Library.h" />
     <ClInclude Include="..\public\Level_Logo.h" />
     <ClInclude Include="..\public\MainApp.h" />
-    <ClInclude Include="..\public\Test.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

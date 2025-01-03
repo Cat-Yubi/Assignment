@@ -20,11 +20,10 @@ HRESULT CLevel_Logo::Initialize()
 
 void CLevel_Logo::Update(_float fTimeDelta)
 {
-	//if (GetKeyState(VK_RETURN) & 0x8000)
-	//{
-	//	m_pGameInstance->Change_Level(CLevel_Library::Create());
-	//}
-
+	if (GetKeyState(VK_RETURN) & 0x8000)
+	{
+		m_pGameInstance->Change_Level(CLevel_Library::Create());
+	}
 }
 
 HRESULT CLevel_Logo::Render(_float fTimeDelta)
@@ -34,7 +33,7 @@ HRESULT CLevel_Logo::Render(_float fTimeDelta)
 	cout << "Press Enter" << endl << endl;
 	
 	getchar();
-	//system("echo^ [2J");
+
 	return S_OK;
 }
 

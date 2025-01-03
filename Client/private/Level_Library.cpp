@@ -20,10 +20,6 @@ HRESULT CLevel_Library::Initialize()
 void CLevel_Library::Update(_float fTimeDelta)
 {
 
-	/*	if (GetKeyState(VK_RETURN) & 0x8000)
-		{
-
-		}*/
 }
 
 HRESULT CLevel_Library::Render(_float fTimeDelta)
@@ -72,16 +68,12 @@ HRESULT CLevel_Library::Render(_float fTimeDelta)
 	}
 	cin.get();
 	cin.get();
-	
-//	m_pGameInstance->Render_Text(m_iLevelIndex, 0);
 
 	return S_OK;
 }
 
 HRESULT CLevel_Library::Ready_Texts()
 {
-	/*if (FAILED(m_pGameInstance->Add_Text(m_iLevelIndex, 0, R"(¤±¤±¤±)")))
-		return E_FAIL;*/
 
 	return S_OK;
 }
