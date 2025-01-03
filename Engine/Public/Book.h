@@ -4,26 +4,28 @@
 
 BEGIN(Engine)
 
-class ENGINE_DLL CLevel abstract : public CBase
+class ENGINE_DLL CBook : public CBase
 {
-protected:
-	CLevel();
-	virtual ~CLevel() = default;
+private:
+	CBook();
+	virtual ~CBook() = default;
 	  
 public:
-	virtual HRESULT Initialize();
+	virtual HRESULT Initialize(string strAuthor, string strTitle);
 	virtual void Update(_float fTimeDelta);
 	virtual HRESULT Render(_float fTimeDelta);
 	virtual HRESULT Ready_Texts();
 public:
-	HRESULT Clear_Resources();
-	_uint GetLevelIndex() const { return m_iLevelIndex; };
+	string Get_Title() { return m_strTitle; }
+	string Get_Author() { return m_strAuthor; }
 
 protected:
 	class CGameInstance*			m_pGameInstance = { nullptr };
-	_uint							m_iLevelIndex = { 0 };
+	string							m_strTitle = "";
+	string							m_strAuthor = "";
 
 public:
+	static CBook* Create(string strAuthor, string strTitle);
 	virtual void Free() override;
 };
 

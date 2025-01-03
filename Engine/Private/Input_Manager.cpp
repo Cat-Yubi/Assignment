@@ -8,24 +8,24 @@ HRESULT CInput_Manager::Initailize(_uint iNumLevels)
 {
 	m_iNumLevels = iNumLevels;
 
-	m_pStrings = new map<const _uint, const _char*>[iNumLevels];
+	m_pStrings = new map<const string, const _char*>[iNumLevels];
 
 	return S_OK;
 }
 
-HRESULT CInput_Manager::Add_Text(_uint iNumLevel, _uint iNumKey, const _char* strName)
+HRESULT CInput_Manager::Add_Text(_uint iNumLevel, string strTag, const _char* strName)
 {
 	if (iNumLevel >= m_iNumLevels)
 		return E_FAIL;
 
-	m_pStrings[iNumLevel].emplace(iNumKey, strName);
+	m_pStrings[iNumLevel].emplace(strTag, strName);
 
 	return S_OK;
 }
 
-HRESULT CInput_Manager::Render_Text(_uint iNumLevel, _uint iNumKey)
+HRESULT CInput_Manager::Render_Text(_uint iNumLevel, string strTag)
 {
-	auto iter = m_pStrings[iNumLevel].find(iNumKey);
+	auto iter = m_pStrings[iNumLevel].find(strTag);
 
 	if (iter == m_pStrings[iNumLevel].end())
 		return E_FAIL;

@@ -28,9 +28,6 @@
     <Filter Include="01.Level\Level_">
       <UniqueIdentifier>{e512f637-7141-42fc-9ef9-ac2c9ae69643}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02.GameObjects\SimpleVector">
-      <UniqueIdentifier>{76846638-4a01-4f31-856b-66780331aa95}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -45,11 +42,8 @@
     <ClCompile Include="..\private\Level_Logo.cpp">
       <Filter>01.Level\Level_Logo</Filter>
     </ClCompile>
-    <ClCompile Include="..\private\Level_Array.cpp">
+    <ClCompile Include="..\private\Level_Library.cpp">
       <Filter>01.Level\Level_Array</Filter>
-    </ClCompile>
-    <ClCompile Include="..\private\SimpleVector.cpp">
-      <Filter>02.GameObjects\SimpleVector</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -65,11 +59,8 @@
     <ClInclude Include="..\public\Level_Logo.h">
       <Filter>01.Level\Level_Logo</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\Level_Array.h">
+    <ClInclude Include="..\public\Level_Library.h">
       <Filter>01.Level\Level_Array</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\SimpleVector.h">
-      <Filter>02.GameObjects\SimpleVector</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

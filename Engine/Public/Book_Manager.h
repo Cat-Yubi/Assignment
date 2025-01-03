@@ -4,30 +4,31 @@
 
 BEGIN(Engine)
 
-class CLevel_Manager final : public CBase
+class CBook_Manager final : public CBase
 {
 private:
-	CLevel_Manager();
-	virtual ~CLevel_Manager() = default;
+	CBook_Manager();
+	virtual ~CBook_Manager() = default;
 
 public:
 	HRESULT Initialize();
-	void Update(_float fTimeDelta);
-	HRESULT Render(_float fTimeDelta);
 
+	void DisplayBook(string strAuthor, string strTitle);
+	void DisplayBorrowBook(string strAuthor, string strTitle);
+
+	class CBook* BorrowBook(string strTitle);
 public:
-	HRESULT Change_Level(class CLevel* pNewLevel);
-	_uint Get_CurrentLevel_Index();
-	_uint Get_LoadingLevel_Index();
-	HRESULT Set_LoadingLevel_Index(_uint ilevel);
-	CLevel* Get_Level() { return m_pCurrentLevel; };
+	HRESULT				Add_Book(string strAuthor, string strTitle, _int iCount);
+
+	list<class CBook*>* Find_BookList(string strAuthor);
+	class CBook*				Find_Book(list<class CBook*>* pBookList, string strTitle);
 
 private:
-	class CLevel* m_pCurrentLevel = { nullptr };
-	_uint m_iLoadingLevelIndex = { 0 };
-
+	unordered_map<string, list<class CBook*>>		m_Library;
+	unordered_map<string, pair<_int, _int>>			m_LibraryByCount;
+	
 public:
-	static CLevel_Manager* Create();
+	static CBook_Manager* Create();
 	virtual void Free() override;
 };
 

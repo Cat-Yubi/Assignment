@@ -1,37 +1,47 @@
-#include "Level.h"
+#include "Book.h"
 #include "GameInstance.h"
 
-CLevel::CLevel()
+CBook::CBook()
 	: m_pGameInstance{ CGameInstance::Get_Instance() }
 {
 	Safe_AddRef(m_pGameInstance);
 }
 
-HRESULT CLevel::Initialize()
+HRESULT CBook::Initialize(string strAuthor, string strTitle)
+{
+	m_strTitle = strTitle;
+	m_strAuthor = strAuthor;
+	return S_OK;
+}
+
+void CBook::Update(_float fTimeDelta)
+{
+}
+
+HRESULT CBook::Render(_float fTimeDelta)
 {
 	return S_OK;
 }
 
-void CLevel::Update(_float fTimeDelta)
-{
-}
-
-HRESULT CLevel::Render(_float fTimeDelta)
+HRESULT CBook::Ready_Texts()
 {
 	return S_OK;
 }
 
-HRESULT CLevel::Clear_Resources()
+CBook* CBook::Create(string strAuthor, string strTitle)
 {
-	return m_pGameInstance->Clear_LevelResources(m_iLevelIndex);
+	CBook* pInstance = new CBook();
+
+	if (FAILED(pInstance->Initialize(strAuthor, strTitle)))
+	{
+		MSG_BOX(TEXT("Failed to Created : CBook_Manager"));
+		Safe_Release(pInstance);
+	}
+
+	return pInstance;
 }
 
-HRESULT CLevel::Ready_Texts()
-{
-	return S_OK;
-}
-
-void CLevel::Free()
+void CBook::Free()
 {
 	__super::Free();
 

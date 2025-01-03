@@ -1,7 +1,7 @@
 #include "Level_Logo.h"
 
 #include "GameInstance.h"
-#include "Level_Array.h"
+#include "Level_Library.h"
 
 CLevel_Logo::CLevel_Logo()
 	: CLevel{}
@@ -20,26 +20,27 @@ HRESULT CLevel_Logo::Initialize()
 
 void CLevel_Logo::Update(_float fTimeDelta)
 {
-	if (GetKeyState(VK_RETURN) & 0x8000)
-	{
-		m_pGameInstance->Change_Level(CLevel_Array::Create());
-	}
+	//if (GetKeyState(VK_RETURN) & 0x8000)
+	//{
+	//	m_pGameInstance->Change_Level(CLevel_Library::Create());
+	//}
 
 }
 
 HRESULT CLevel_Logo::Render(_float fTimeDelta)
 {
-	m_pGameInstance->Render_Text(m_iLevelIndex, 0);
+	m_pGameInstance->Render_Text(m_iLevelIndex, "Logo");
 
 	cout << "Press Enter" << endl << endl;
 	
 	getchar();
+	//system("echo^ [2J");
 	return S_OK;
 }
 
 HRESULT CLevel_Logo::Ready_Texts()
 {
-	if (FAILED(m_pGameInstance->Add_Text(m_iLevelIndex, 0, R"(
+	if (FAILED(m_pGameInstance->Add_Text(m_iLevelIndex, "Logo", R"(
 	` `   `       ` ` ``                                                              ``     ` `  `  `                       ``          ``                                  
 	`   `         ` `` `                                                            ```      ` `   `                        `##`        `           `                        
 	  ##` `       `##  `                                                            `##   `` `########``  ` ````````` `   `  ## `      `##########```   `#################   

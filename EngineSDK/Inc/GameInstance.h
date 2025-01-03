@@ -29,13 +29,20 @@ public: /* For.Timer_Manager */
 	_float Compute_TimeDelta(const _wstring& strTimerTag);
 
 public: /* For.Input_Manager */
-	HRESULT Add_Text(_uint iNumLevel, _uint iNumKey, const _char* strName);
-	HRESULT Render_Text(_uint iNumLevel, _uint iNumKey);
+	HRESULT Add_Text(_uint iNumLevel,string strTag, const _char* strName);
+	HRESULT Render_Text(_uint iNumLevel, string strTag);
 	
+public: /* For.Book_Manager*/
+	void DisplayBook(string strAuthor = "", string strTitle = "");
+	void DisplayBorrowBook(string strAuthor = "", string strTitle = "");
+
+	class CBook* BorrowBook(string strTitle);
+	HRESULT		 Add_Book(string strAuthor, string strTitle, _int iCount);
 private:
 	class CLevel_Manager* m_pLevel_Manager = { nullptr };
 	class CTimer_Manager* m_pTimer_Manager = { nullptr };
 	class CInput_Manager* m_pInput_Manager = { nullptr };
+	class CBook_Manager*  m_pBook_Manager  = { nullptr };
 public:
 	void Release_Engine();
 

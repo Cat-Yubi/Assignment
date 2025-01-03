@@ -31,6 +31,12 @@
     <Filter Include="00.System\01.Input">
       <UniqueIdentifier>{a468f7ab-3608-49d9-b093-fb220bf9e66b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Utilty\Book">
+      <UniqueIdentifier>{205dea30-2772-4259-b280-bb6428191485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utilty\Book\BookManager">
+      <UniqueIdentifier>{081e58ab-0125-47a7-bfd1-f2ad2dff4eb0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Public\Engine_Defines.h">
@@ -69,6 +75,12 @@
     <ClInclude Include="..\public\Input_Manager.h">
       <Filter>00.System\01.Input</Filter>
     </ClInclude>
+    <ClInclude Include="..\Public\Book_Manager.h">
+      <Filter>01.Utilty\Book\BookManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Book.h">
+      <Filter>01.Utilty\Book</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Private\Base.cpp">
@@ -91,6 +103,12 @@
     </ClCompile>
     <ClCompile Include="..\private\Input_Manager.cpp">
       <Filter>00.System\01.Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Book.cpp">
+      <Filter>01.Utilty\Book</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Book_Manager.cpp">
+      <Filter>01.Utilty\Book\BookManager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

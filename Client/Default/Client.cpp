@@ -1,12 +1,23 @@
-#include "GameInstance.h"
+﻿#include "GameInstance.h"
 #include "MainApp.h"
 
-void SetConsoleSize(_int width, _int height, _int bufferWidth, _int bufferHeight);
+void SetConsoleSize(int width, int height);
 
 int main()
 {
-	//SetConsoleSize(1920, 1080, 1920, 1080);
-
+	//SetConsoleSize(1920, 1080);
+	//getchar();
+	//SetConsoleSize(1920, 1080);
+	//HWND hwnd = GetConsoleWindow();
+	//if (hwnd) {
+	//	// 콘솔 창 크기 설정
+	//	MoveWindow(hwnd, 100, 100, 800, 600, TRUE);  // (x, y, width, height)
+	//}
+	//system("mode con");
+	//system("mode con cols=300 lines=70 | title 제목명");
+	//getchar();
+	//system("mode con");
+	//getchar();
 	CMainApp* pMainApp = CMainApp::Create();
 	if (nullptr == pMainApp)
 		return FALSE;
@@ -43,26 +54,14 @@ int main()
 	Safe_Release(pMainApp);
 }
 
-void SetConsoleSize(_int width, _int height, _int bufferWidth, _int bufferHeight)
-{
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-	if (hConsole == nullptr)
-		return;
-
-	if (bufferWidth > 0 && bufferHeight > 0)
-	{
-		COORD bufferSize;
-		bufferSize.X = bufferWidth;
-		bufferSize.Y = bufferHeight;
-		SetConsoleScreenBufferSize(hConsole, bufferSize);
+void SetConsoleSize(int width, int height) {
+	// Get the console window handle
+	HWND hwnd = GetConsoleWindow();
+	if (hwnd) {
+		// Set the console size (width x height)
+		MoveWindow(hwnd, 100, 100, width, height, TRUE);
 	}
-
-	SMALL_RECT windowSize;
-	windowSize.Left = 0;
-	windowSize.Top = 0;
-	windowSize.Right = width - 1;
-	windowSize.Bottom = height - 1;
-
-	SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
+	else {
+		std::cout << "Failed to get console window handle!" << std::endl;
+	}
 }

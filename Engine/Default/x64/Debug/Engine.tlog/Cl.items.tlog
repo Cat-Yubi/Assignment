@@ -1,4 +1,6 @@
 C:\Users\kimta\Documents\Assignment\Engine\Private\Base.cpp;C:\Users\kimta\Documents\Assignment\Engine\Default\x64\Debug\Base.obj
+C:\Users\kimta\Documents\Assignment\Engine\Private\Book.cpp;C:\Users\kimta\Documents\Assignment\Engine\Default\x64\Debug\Book.obj
+C:\Users\kimta\Documents\Assignment\Engine\Private\Book_Manager.cpp;C:\Users\kimta\Documents\Assignment\Engine\Default\x64\Debug\Book_Manager.obj
 C:\Users\kimta\Documents\Assignment\Engine\private\GameInstance.cpp;C:\Users\kimta\Documents\Assignment\Engine\Default\x64\Debug\GameInstance.obj
 C:\Users\kimta\Documents\Assignment\Engine\private\Input_Manager.cpp;C:\Users\kimta\Documents\Assignment\Engine\Default\x64\Debug\Input_Manager.obj
 C:\Users\kimta\Documents\Assignment\Engine\private\Level.cpp;C:\Users\kimta\Documents\Assignment\Engine\Default\x64\Debug\Level.obj
