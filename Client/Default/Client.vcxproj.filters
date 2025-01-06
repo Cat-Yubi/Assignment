@@ -22,6 +22,9 @@
     <Filter Include="01.Level\Level_Array">
       <UniqueIdentifier>{bd349a96-d211-4642-b648-e3398386a9e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Level\Level_Input">
+      <UniqueIdentifier>{90ef679c-bf2d-4378-ab49-ac7d30405c2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -36,6 +39,9 @@
     <ClCompile Include="..\private\Level_Library.cpp">
       <Filter>01.Level\Level_Array</Filter>
     </ClCompile>
+    <ClCompile Include="..\private\Level_Input.cpp">
+      <Filter>01.Level\Level_Input</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\public\Client_Defines.h">
@@ -49,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="..\public\Level_Library.h">
       <Filter>01.Level\Level_Array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Level_Input.h">
+      <Filter>01.Level\Level_Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

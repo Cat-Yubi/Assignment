@@ -2,7 +2,7 @@
 
 #include "GameInstance.h"
 #include "Level_Library.h"
-
+#include "Level_Input.h"
 CLevel_Logo::CLevel_Logo()
 	: CLevel{}
 {
@@ -20,19 +20,23 @@ HRESULT CLevel_Logo::Initialize()
 
 void CLevel_Logo::Update(_float fTimeDelta)
 {
-	if (GetKeyState(VK_RETURN) & 0x8000)
-	{
-		m_pGameInstance->Change_Level(CLevel_Library::Create());
-	}
+
 }
 
 HRESULT CLevel_Logo::Render(_float fTimeDelta)
 {
 	m_pGameInstance->Render_Text(m_iLevelIndex, "Logo");
 
-	cout << "Press Enter" << endl << endl;
+	_int iNumInput = 0;
+	cout << "1. Level_Library			2. Level_Input" << endl << endl;
 	
-	getchar();
+	while (iNumInput <= 0 || iNumInput > 2)
+		cin >> iNumInput;
+
+	if (iNumInput == 1)
+		m_pGameInstance->Change_Level(CLevel_Library::Create());
+	else
+		m_pGameInstance->Change_Level(CLevel_Input::Create());
 
 	return S_OK;
 }
